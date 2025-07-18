@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# 🎯 React Quiz App using useReducer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and interactive quiz application built using React and the useReducer hook. This app demonstrates how to manage complex component state in a clean and scalable way using reducer logic.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- Built with React functional components
 
-### `npm start`
+- Uses useReducer for managing quiz state
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Dynamic question loading
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Tracks user score
 
-### `npm test`
+- Displays final results
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Option to restart the quiz
 
-### `npm run build`
+- Responsive and clean UI
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React (Create React App)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- JavaScript (ES6+)
 
-### `npm run eject`
+- CSS
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📁 Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The app is divided into clear and reusable parts:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- components/ folder contains small UI parts like the quiz display and question renderer.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- data/ folder includes the quiz questions.
 
-## Learn More
+- App.js handles the overall layout and logic.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔄 useReducer Functionality
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This app uses useReducer instead of multiple useState hooks to manage quiz-related state. The reducer handles selecting an answer, moving to the next question, calculating the score, and restarting the quiz. This approach keeps the state logic centralized and easier to manage.
 
-### Code Splitting
+## 🧠 How It Works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- User starts the quiz and answers multiple-choice questions.
 
-### Analyzing the Bundle Size
+- Each answer is handled through a reducer action.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Score is updated based on correct answers.
 
-### Making a Progressive Web App
+- Once all questions are answered, the final result is displayed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- A restart button allows the user to retake the quiz.
 
-### Advanced Configuration
+## ▶️ Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Clone the repository
 
-### Deployment
+- Run npm install to install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Use npm start to launch the development server
 
-### `npm run build` fails to minify
+- Use npm run server to lanch the api server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Visit http://localhost:3000 to view the app in your browser
+
+## 👀 Live Demo 
+
+[Click Here to see the live](https://react-quiz-app-rouge-rho.vercel.app/)
