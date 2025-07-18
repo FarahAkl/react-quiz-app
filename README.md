@@ -60,7 +60,7 @@ This app uses useReducer instead of multiple useState hooks to manage quiz-relat
 
 - Use npm start to launch the development server
 
-- Use npm run server to lanch the api server
+- Use npm run server to launch the api server
 
 Visit http://localhost:3000 to view the app in your browser
 
