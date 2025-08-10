@@ -55,9 +55,11 @@ State is still handled with `useReducer`, but wrapped inside a Context Provider,
 ## ▶️ Getting Started
 
 1. Clone the repository:  
-   ```bash
-   git clone <repo-url>
-   cd react-quiz-app
+
+```
+git clone "https://github.com/FarahAkl/react-quiz-app.git"
+cd react-quiz-app
+```
 2. Install dependencies:
 
 ```
