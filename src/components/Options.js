@@ -1,4 +1,7 @@
-export default function Options({ question, dispatch, answer }) {
+import { useQuestions } from "../context/QuestionContext";
+
+export default function Options() {
+  const { question, dispatch, answer } = useQuestions();
   const hasAnswer = answer !== null;
 
   return (
