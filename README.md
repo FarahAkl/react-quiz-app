@@ -1,69 +1,79 @@
-# 🎯 React Quiz App using useReducer
+# 🎯 React Quiz App using useReducer & Context API
 
-A simple and interactive quiz application built using React and the useReducer hook. This app demonstrates how to manage complex component state in a clean and scalable way using reducer logic.
+A simple and interactive quiz application built using **React** with two implementations: one using the **useReducer** hook only, and another using **useReducer** combined with the **Context API** for global state management. Both versions share the same project structure and logic but differ in how state is accessed and shared across components.
 
 ## 🚀 Features
 
-- Built with React functional components
-
-- Uses useReducer for managing quiz state
-
-- Dynamic question loading
-
-- Tracks user score
-
-- Displays final results
-
-- Option to restart the quiz
-
-- Responsive and clean UI
+- Built with React functional components  
+- Two state management approaches:
+  - **Version 1:** useReducer only  
+  - **Version 2:** useReducer + Context API for global state sharing  
+- Dynamic question loading from an API  
+- Tracks user score in real-time  
+- Timer for each quiz session  
+- Displays final results and high score  
+- Option to restart the quiz  
+- Responsive and clean UI  
 
 ## 🛠️ Tech Stack
 
-- React (Create React App)
-
-- JavaScript (ES6+)
-
-- CSS
+- **React** (Create React App)  
+- **JavaScript** (ES6+)  
+- **CSS** for styling  
 
 ## 📁 Project Structure
 
 The app is divided into clear and reusable parts:
 
-- components/ folder contains small UI parts like the quiz display and question renderer.
+- **components/** → UI parts like quiz display, progress bar, and question renderer.  
+- **context/** → Contains the Context API provider (for the Context version).  
+- **data/** → Quiz questions (or fetched from API).  
+- **App.js** → Overall layout and routing logic.  
 
-- data/ folder includes the quiz questions.
+## 🔄 State Management Approaches
 
-- App.js handles the overall layout and logic.
+### Version 1 – useReducer only  
+State is managed inside a main component using `useReducer`. Child components receive props to interact with state.
 
-## 🔄 useReducer Functionality
+### Version 2 – useReducer + Context API  
+State is still handled with `useReducer`, but wrapped inside a Context Provider, allowing any component in the app to directly access and dispatch actions without prop drilling.
 
-This app uses useReducer instead of multiple useState hooks to manage quiz-related state. The reducer handles selecting an answer, moving to the next question, calculating the score, and restarting the quiz. This approach keeps the state logic centralized and easier to manage.
+**Benefits of Context API in this app:**
+- Eliminates long prop chains
+- Makes the code more scalable for larger projects
+- Keeps state and logic centralized
 
 ## 🧠 How It Works
 
-- User starts the quiz and answers multiple-choice questions.
-
-- Each answer is handled through a reducer action.
-
-- Score is updated based on correct answers.
-
-- Once all questions are answered, the final result is displayed.
-
-- A restart button allows the user to retake the quiz.
+1. User starts the quiz.  
+2. Questions are loaded dynamically from an API.  
+3. User selects answers → reducer updates score.  
+4. Timer counts down per session.  
+5. At the end, results and high score are shown.  
+6. User can restart the quiz anytime.
 
 ## ▶️ Getting Started
 
-- Clone the repository
+1. Clone the repository:  
+   ```bash
+   git clone <repo-url>
+   cd react-quiz-app
+2. Install dependencies:
 
-- Run npm install to install dependencies
+```
+npm install
+```
+3. Start the app:
 
-- Use npm start to launch the development server
+```
+npm start
+```
+4. Start the mock API server:
 
-- Use npm run server to launch the api server
+```
+npm run server
+```
+Visit http://localhost:3000 in your browser.
 
-Visit http://localhost:3000 to view the app in your browser
-
-## 👀 Live Demo 
-
+## 👀 Live Demo
 [Click Here to see the live](https://react-quiz-app-rouge-rho.vercel.app/)
